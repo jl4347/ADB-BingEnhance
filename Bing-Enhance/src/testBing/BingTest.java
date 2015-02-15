@@ -5,13 +5,15 @@ import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;
 
+import javax.xml.*;
+
 //Download and add this library to the build path.
 import org.apache.commons.codec.binary.Base64;
 
 public class BingTest {
 
 	public static void main(String[] args) throws IOException {
-		String bingUrl = "https://api.datamarket.azure.com/Bing/Search/Web?Query=%27gates%27&$top=10&$format=Atom";
+		String bingUrl = "https://api.datamarket.azure.com/Bing/Search/Web?Query=%27gates%27&$top=10&$format=json";
 		//Provide your account key here. 
 		String accountKey = "R3HX3U71ionA0Z6uGfNdn2r06vaMF2SMqfyhIjh2H1A";
 		
@@ -29,7 +31,10 @@ public class BingTest {
 		String content = new String(contentRaw);
 
 		//The content string is the xml/json output from Bing.
-		System.out.println(content);
+//		System.out.println(content);
+		
+		
+		
 	}
 
 }
