@@ -23,11 +23,12 @@ import org.json.JSONObject;
 public class BingData {
 	
 	
-	String bingUrl = "https://api.datamarket.azure.com/Bing/Search/Web?Query=%27gates%27&$top=10&$format=Json";
+	
 	//Provide your account key here. 
 	String accountKey = "R3HX3U71ionA0Z6uGfNdn2r06vaMF2SMqfyhIjh2H1A";
 
-	public String getFromBing() {
+	public String getFromBing(String query) {
+		String bingUrl = "https://api.datamarket.azure.com/Bing/Search/Web?Query=%27"+query+"%27&$top=10&$format=Json";
 		byte[] accountKeyBytes = Base64.encodeBase64((accountKey + ":" + accountKey).getBytes());
 		String accountKeyEnc = new String(accountKeyBytes);
 		String content = null;
@@ -75,10 +76,11 @@ public class BingData {
 		List<String[]> result = new ArrayList<String[]>();
 		for (int i=0; i<docs.size();i++){			
 			String sentence = docs.get(i).title+" "+docs.get(i).desc;
-			sentence= sentence.toLowerCase();			
+			sentence= sentence.toLowerCase();
 			Pattern p=Pattern.compile("[.,\"\\?!:'-]");
 			Matcher m=p.matcher(sentence);
-			String r=m.replaceAll("");			
+			String r=m.replaceAll("");	
+			r = r.trim();
 			String[] tokens = r.split(" ");
 		    result.add(tokens);			
 		}
@@ -88,7 +90,7 @@ public class BingData {
 		
 		BingData  d = new BingData();
 		//call Bing API
-		String s = d.getFromBing();
+		String s = d.getFromBing("columbia");
 		//get doc objects
 		List<Doc> docs= d.parseJson(s);
 		//get vector input
