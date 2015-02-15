@@ -1,14 +1,12 @@
 package util;
 
-import java.io.File;
-import java.io.FileReader;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -76,6 +74,7 @@ public class BingData {
 		List<String[]> result = new ArrayList<String[]>();
 		for (int i=0; i<docs.size();i++){			
 			String sentence = docs.get(i).title+" "+docs.get(i).desc;
+			//
 			sentence= sentence.toLowerCase();
 			Pattern p=Pattern.compile("[.,\"\\?!:'-]");
 			Matcher m=p.matcher(sentence);
