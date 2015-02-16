@@ -26,13 +26,16 @@ public class BingData {
 	String accountKey = "R3HX3U71ionA0Z6uGfNdn2r06vaMF2SMqfyhIjh2H1A";
 
 	public String getFromBing(String query) {
+		query.replaceAll(" ", "%20");
 		String bingUrl = "https://api.datamarket.azure.com/Bing/Search/Web?Query=%27"+query+"%27&$top=10&$format=Json";
 		byte[] accountKeyBytes = Base64.encodeBase64((accountKey + ":" + accountKey).getBytes());
 		String accountKeyEnc = new String(accountKeyBytes);
 		String content = null;
 		URL url;
 		try {
+			
 			url = new URL(bingUrl);
+			
 			URLConnection urlConnection = url.openConnection();
 			urlConnection.setRequestProperty("Authorization", "Basic " + accountKeyEnc);
 			InputStream inputStream = (InputStream) urlConnection.getContent();		
@@ -76,7 +79,7 @@ public class BingData {
 			String sentence = docs.get(i).title+" "+docs.get(i).desc;
 			//
 			sentence= sentence.toLowerCase();
-			Pattern p=Pattern.compile("[.,\"\\?!:'-]");
+			Pattern p=Pattern.compile("[.,\"\\?!:'-\\)\\(&]");
 			Matcher m=p.matcher(sentence);
 			String r=m.replaceAll("");	
 			r = r.trim();

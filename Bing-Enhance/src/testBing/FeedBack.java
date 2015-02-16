@@ -50,8 +50,8 @@ public class FeedBack {
 			//keywords=keys[0]+"%"+keys[1]; detele
 			String key2 = vocab_list.get(keys[0]);
 			String key3 = vocab_list.get(keys[1]);
-			query = query+"%"+key2+"%"+key3;
-			q.tokens=query.split("%");
+			query = query+"%20"+key2+"%20"+key3;
+			q.tokens=query.split("%20");
 			
 			precision = qe.computePrecision(docs);
 			
