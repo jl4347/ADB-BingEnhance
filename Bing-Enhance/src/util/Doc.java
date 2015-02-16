@@ -13,8 +13,4 @@ public class Doc {
 		this.title=title;
     }
 	
-	public static void main(String[] args){
-		double a = 0;
-		System.out.println(0.75);
-	}
 }

@@ -1,7 +1,9 @@
 package testBing;
 
 
+import java.util.HashMap;
 import java.util.List;
+
 import util.Doc;
 
 
@@ -37,19 +39,23 @@ public class QueryExpand {
 				count++;
 		return count;		
 	}	
-	public int[] findKeywordsIndex(double[] query){
+	public int[] findKeywordsIndex(double[] query, HashMap hm){
 		int[] indexes= new int[2];
 		int max_index = 0;
 		int nex_index = 0;
 		double max = Double.MIN_VALUE;
 		double next = Double.MIN_VALUE;
 		for(int i=0;i<query.length;i++){
+			if(hm.containsKey(i))
+				continue;
 			if(max<query[i]){
 				max=query[i];
 				max_index=i;
 			}
 		}
 		for(int i=0;i<query.length;i++){
+			if(hm.containsKey(i))
+				continue;
 			if(i==max_index)
 				continue;
 			if(next<query[i]){
@@ -64,18 +70,18 @@ public class QueryExpand {
 	
 	public double computePrecision(List<Doc> docs){
 		int count =countRelevant(docs);
-		double precision = count/docs.size();			
+		double precision = (double)count/docs.size();			
 		return precision;
 	}
 	
-	public static void main(String[] args){
-		double[] d ={0.3, 3.0, 3.2, 3.0};
-		QueryExpand q = new QueryExpand();
-		int[] a =q.findKeywordsIndex(d);
-		for(int i=0;i<2;i++){
-			System.out.println(a[i]);
-		}
-	}
+//	public static void main(String[] args){
+//		double[] d ={0.3, 3.0, 3.2, 3.0};
+//		QueryExpand q = new QueryExpand();
+//		int[] a =q.findKeywordsIndex(d);
+//		for(int i=0;i<2;i++){
+//			System.out.println(a[i]);
+//		}
+//	}
 	
 	
 }
