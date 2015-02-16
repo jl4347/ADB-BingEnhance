@@ -2,7 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
-	<classpathentry kind="lib" path="/Users/apple/Documents/eclipse/prjsources/commons-codec-1.10/commons-codec-1.10.jar"/>
-	<classpathentry kind="lib" path="/Users/apple/Documents/eclipse/prjsources/json.org.jar"/>
+	<classpathentry kind="lib" path="/Users/jialunliu/Documents/Advance_DB/ADB-BingEnhance/json.org.jar"/>
+	<classpathentry kind="lib" path="/Users/jialunliu/Documents/Advance_DB/ADB-BingEnhance/org-apache-commons-codec.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
