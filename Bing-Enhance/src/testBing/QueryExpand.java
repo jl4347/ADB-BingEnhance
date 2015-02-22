@@ -28,10 +28,11 @@ public class QueryExpand {
 		}
 		
 		for (int i=0;i<q.length;i++){
-			q[i]=query[i]+0.75*beta[i]/Dr-0.25*gamma[i]/Dnr;
+			q[i]=query[i]+0.75*beta[i]/Dr-0.15*gamma[i]/Dnr;
 		}		
 		return q;		
-	}	
+	}
+	
 	private static int countRelevant(List<Doc> docs){
 		int count =0;
 		for (int i=0;i<docs.size();i++)
@@ -39,6 +40,7 @@ public class QueryExpand {
 				count++;
 		return count;		
 	}	
+	
 	public int[] findKeywordsIndex(double[] query, HashMap hm){
 		int[] indexes= new int[2];
 		int max_index = 0;

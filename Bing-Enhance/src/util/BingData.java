@@ -23,7 +23,7 @@ public class BingData {
 	
 	
 	//Provide your account key here. 
-	String accountKey = "xXxxxxxxxxxxxx";
+	String accountKey = "W5lSDB4TuFJk9OTI55RhqDa74QLT+NphlYDDUlJrJSY";
 
 	public String getFromBing(String query) {
 		query.replaceAll(" ", "%20");
@@ -79,7 +79,7 @@ public class BingData {
 			String sentence = docs.get(i).title+" "+docs.get(i).desc;
 			//
 			sentence= sentence.toLowerCase();
-			Pattern p=Pattern.compile("[.,\"\\?!:'-\\)\\(&]");
+			Pattern p=Pattern.compile("[.,\"\\?!:'-\\)\\(\\&]");
 			Matcher m=p.matcher(sentence);
 			String r=m.replaceAll("");	
 			r = r.trim();

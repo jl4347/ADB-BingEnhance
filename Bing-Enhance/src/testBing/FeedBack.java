@@ -13,13 +13,25 @@ import util.Query;
 public class FeedBack {
 
 	public static void main(String[] args){
-		String keywords = "columbia";
+		String pre_query = "";
+		Scanner scan=null;
+		
+		String keywords = "";
+		System.out.println("Please enter one keyword for query: ");
+		scan = new Scanner(System.in);
+		keywords = scan.nextLine();
+		
+		System.out.println(keywords);
+		
 		double target = 0.9;
 		double precision = 0;
 		Query q = new Query();
 		q.tokens=keywords.split(" ");
 		String query = keywords;
+		
+		int iteration = 0;
 		do{
+			iteration++;
 			BingData bd = new BingData();
 			//call Bing API
 			String response=bd.getFromBing(query);
@@ -50,6 +62,8 @@ public class FeedBack {
 			//keywords=keys[0]+"%"+keys[1]; detele
 			String key2 = vocab_list.get(keys[0]);
 			String key3 = vocab_list.get(keys[1]);
+			
+			pre_query = query;
 			query = query+"%20"+key2+"%20"+key3;
 			q.tokens=query.split("%20");
 			
@@ -57,13 +71,19 @@ public class FeedBack {
 			
 						
 			System.out.println("------------------------------------");
-			System.out.println("keywords="+query);
+			System.out.println("Iteration " + iteration);
+			System.out.println("previous keywords= " + pre_query);
+			System.out.println("augmented keywords= " + key2 + " " + key3);
+			System.out.println("new keywords= "+ pre_query + " " + key2 + " " + key3);
 			System.out.println("precision="+precision);
 			System.out.println("------------------------------------");			
 			
 			
-		}while(precision<target || precision==0);		
+		}while(precision < target && precision != 0);
+		// Terminates when the precision is 0 at first iteration
 	}
+	
+	
 	private static boolean getFeedBack(Doc d){
 		
 		System.out.println(d.url);
