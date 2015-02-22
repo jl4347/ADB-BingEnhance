@@ -23,7 +23,7 @@ public class BingData {
 	
 	
 	//Provide your account key here. 
-	String accountKey = "W5lSDB4TuFJk9OTI55RhqDa74QLT+NphlYDDUlJrJSY";
+	String accountKey = "xxxxxxxxxxxxxxxxxxxxxxxxxx";
 
 	public String getFromBing(String query) {
 		query.replaceAll(" ", "%20");
@@ -88,18 +88,18 @@ public class BingData {
 		}
 		return result;
 	}
-	public static void main(String[] args){
-		
-		BingData  d = new BingData();
-		//call Bing API
-		String s = d.getFromBing("columbia");
-		//get doc objects
-		List<Doc> docs= d.parseJson(s);
-		//get vector input
-		List<String[]> r = d.getInput(docs);
-		for (int i=0;i<r.size();i++){
-			System.out.println(r.get(i)[0]);
-		}
-	}
+//	public static void main(String[] args){
+//		
+//		BingData  d = new BingData();
+//		//call Bing API
+//		String s = d.getFromBing("columbia");
+//		//get doc objects
+//		List<Doc> docs= d.parseJson(s);
+//		//get vector input
+//		List<String[]> r = d.getInput(docs);
+//		for (int i=0;i<r.size();i++){
+//			System.out.println(r.get(i)[0]);
+//		}
+//	}
 	
 }

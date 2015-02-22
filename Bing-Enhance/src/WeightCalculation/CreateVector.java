@@ -77,11 +77,13 @@ public class CreateVector {
 		
 		List<double[]> Doc_weight = new ArrayList<double[]>();
 		List<double[]> Doc_tf = new ArrayList<double[]>();
+		List<double[]> Doc_idf = new ArrayList<double[]>();
 				
 		for (int i=0;i<Docs.size();i++){
 			double[] doc = new double[Vocab_len];
 			Doc_weight.add(doc);
 			Doc_tf.add(doc);
+			Doc_idf.add(doc);
 		}
 
 		// Initialize query vector
@@ -95,9 +97,18 @@ public class CreateVector {
 			// Iterate through the doc index for each token
 			for (Integer entry : doc_indexs){
 				// compute tf-idf for weight
-				Doc_weight.get(entry-1)[Vocab_index] += Math.log10((double) Doc_tokens.size()/(Vocab_df.get(token).size()));
+				// Add additional weight to the title of each doc
+				if (Docs.get(entry-1).title_token.contains(token)){
+					//System.out.println(Docs.get(entry-1).title_token);
+					Doc_idf.get(entry-1)[Vocab_index] += Math.log10((double) Doc_tokens.size()/(Vocab_df.get(token).size()));
+				}
+				Doc_idf.get(entry-1)[Vocab_index] += Math.log10((double) Doc_tokens.size()/(Vocab_df.get(token).size()));
 				
 				// Compute the tf
+//				if (Docs.get(entry-1).title_token.contains(token)){
+//					// Add additional weight to the title of each doc
+//					Doc_tf.get(entry-1)[Vocab_index]++;
+//				}
 				Doc_tf.get(entry-1)[Vocab_index]++;
 			}
 			
@@ -113,15 +124,19 @@ public class CreateVector {
 			Vocab_index++;
 		}
 		
-		// Compute wtf-idf
-		for (int i = 0; i < Doc_weight.size(); i++){
-			for (int j = 0; j < Doc_weight.get(i).length; j++){
-				if (Doc_tf.get(i)[j] != 0){
-					Doc_weight.get(i)[j] = (1+Math.log10(Doc_tf.get(i)[j]))*Doc_weight.get(i)[j];
-				}
-				else{
-					Doc_weight.get(i)[j] = 0;
-				}
+		
+		for (int i = 0; i < Doc_tf.size(); i++){
+			for (int j = 0; j < Doc_tf.get(i).length; j++){
+				// Compute wtf-idf
+//				if (Doc_tf.get(i)[j] != 0){
+//					Doc_weight.get(i)[j] = (1+Math.log10(Doc_tf.get(i)[j]))*Vocab_df.get(Vocab_list.get(j)).size();
+//				}
+//				else{
+//					Doc_weight.get(i)[j] = 0;
+//				}
+				
+				// Normal tf-idf
+				Doc_weight.get(i)[j] = Doc_idf.get(i)[j];
 				
 			}
 		}
