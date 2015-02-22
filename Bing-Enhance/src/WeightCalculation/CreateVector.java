@@ -76,10 +76,12 @@ public class CreateVector {
 		int Vocab_len = Vocab_list.size();
 		
 		List<double[]> Doc_weight = new ArrayList<double[]>();
+		List<double[]> Doc_tf = new ArrayList<double[]>();
 				
 		for (int i=0;i<Docs.size();i++){
 			double[] doc = new double[Vocab_len];
 			Doc_weight.add(doc);
+			Doc_tf.add(doc);
 		}
 
 		// Initialize query vector
@@ -94,6 +96,9 @@ public class CreateVector {
 			for (Integer entry : doc_indexs){
 				// compute tf-idf for weight
 				Doc_weight.get(entry-1)[Vocab_index] += Math.log10((double) Doc_tokens.size()/(Vocab_df.get(token).size()));
+				
+				// Compute the tf
+				Doc_tf.get(entry-1)[Vocab_index]++;
 			}
 			
 			// To generate a new vector for query
@@ -106,6 +111,19 @@ public class CreateVector {
 			
 			// For next vocab in the vocab_list
 			Vocab_index++;
+		}
+		
+		// Compute wtf-idf
+		for (int i = 0; i < Doc_weight.size(); i++){
+			for (int j = 0; j < Doc_weight.get(i).length; j++){
+				if (Doc_tf.get(i)[j] != 0){
+					Doc_weight.get(i)[j] = (1+Math.log10(Doc_tf.get(i)[j]))*Doc_weight.get(i)[j];
+				}
+				else{
+					Doc_weight.get(i)[j] = 0;
+				}
+				
+			}
 		}
 		
 		// Print doc vector
