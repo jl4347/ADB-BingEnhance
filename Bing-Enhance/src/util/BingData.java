@@ -23,7 +23,7 @@ public class BingData {
 	
 	
 	//Provide your account key here. 
-	String accountKey = "xxxxxxxxxxxxxxxxxxxxxxxxxx";
+	String accountKey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
 
 	public String getFromBing(String query) {
 		query.replaceAll(" ", "%20");

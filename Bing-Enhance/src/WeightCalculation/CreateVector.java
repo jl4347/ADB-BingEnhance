@@ -11,12 +11,13 @@ import util.*;
 
 public class CreateVector {
 	
-	public static Map<String, ArrayList<Integer>> Vocab = new HashMap<String, ArrayList<Integer>>();
-	public static Map<String, HashSet<Integer>> Vocab_df = new HashMap<String, HashSet<Integer>>();
-	
-	public static Map<String, Integer> query_dic = new HashMap<String, Integer>();
-	
 	public ArrayList<String> CalcWeight(List<Doc> Docs, Query query, List<String[]> Doc_tokens){
+		
+		Map<String, ArrayList<Integer>> Vocab = new HashMap<String, ArrayList<Integer>>();
+		Map<String, HashSet<Integer>> Vocab_df = new HashMap<String, HashSet<Integer>>();
+		
+		Map<String, Integer> query_dic = new HashMap<String, Integer>();
+		
 		int Doc_index = 1;
 		
 		// Iterate through the list of docs
@@ -77,13 +78,15 @@ public class CreateVector {
 		
 		List<double[]> Doc_weight = new ArrayList<double[]>();
 		List<double[]> Doc_tf = new ArrayList<double[]>();
-		List<double[]> Doc_idf = new ArrayList<double[]>();
+		List<double[]> Doc_df = new ArrayList<double[]>();
 				
 		for (int i=0;i<Docs.size();i++){
 			double[] doc = new double[Vocab_len];
+			double[] doc2 = new double[Vocab_len];
+			double[] doc3 = new double[Vocab_len];
 			Doc_weight.add(doc);
-			Doc_tf.add(doc);
-			Doc_idf.add(doc);
+			Doc_tf.add(doc2);
+			Doc_df.add(doc3);
 		}
 
 		// Initialize query vector
@@ -91,24 +94,12 @@ public class CreateVector {
 		
 		int Vocab_index = 0;
 		
-		// Calculate the weight for each doc
+		// Calculate the tf for each doc
 		for (String token : Vocab_list){
 			ArrayList<Integer> doc_indexs = Vocab.get(token);
 			// Iterate through the doc index for each token
 			for (Integer entry : doc_indexs){
-				// compute tf-idf for weight
-				// Add additional weight to the title of each doc
-				if (Docs.get(entry-1).title_token.contains(token)){
-					//System.out.println(Docs.get(entry-1).title_token);
-					Doc_idf.get(entry-1)[Vocab_index] += Math.log10((double) Doc_tokens.size()/(Vocab_df.get(token).size()));
-				}
-				Doc_idf.get(entry-1)[Vocab_index] += Math.log10((double) Doc_tokens.size()/(Vocab_df.get(token).size()));
-				
 				// Compute the tf
-//				if (Docs.get(entry-1).title_token.contains(token)){
-//					// Add additional weight to the title of each doc
-//					Doc_tf.get(entry-1)[Vocab_index]++;
-//				}
 				Doc_tf.get(entry-1)[Vocab_index]++;
 			}
 			
@@ -124,40 +115,59 @@ public class CreateVector {
 			Vocab_index++;
 		}
 		
-		
-		for (int i = 0; i < Doc_tf.size(); i++){
-			for (int j = 0; j < Doc_tf.get(i).length; j++){
-				// Compute wtf-idf
-//				if (Doc_tf.get(i)[j] != 0){
-//					Doc_weight.get(i)[j] = (1+Math.log10(Doc_tf.get(i)[j]))*Vocab_df.get(Vocab_list.get(j)).size();
+		// Calculate the df for each doc
+		for (int i = 0; i < Vocab_list.size(); i++ ){
+			for (int j = 0; j < Doc_tokens.size(); j++){
+				// Method 1
+				Doc_df.get(j)[i] = Vocab_df.get(Vocab_list.get(i)).size();
+				
+				// Method 3: 0.5 for relevant and 1 for irrelevant
+//				if (Docs.get(j).relevant){
+//					Doc_df.get(j)[i] = 0.5*Vocab_df.get(Vocab_list.get(i)).size();
 //				}
 //				else{
-//					Doc_weight.get(i)[j] = 0;
+//					Doc_df.get(j)[i] = Vocab_df.get(Vocab_list.get(i)).size();
 //				}
 				
-				// Normal tf-idf
-				Doc_weight.get(i)[j] = Doc_idf.get(i)[j];
 				
 			}
 		}
 		
-		// Print doc vector
-//		for (double[] doc : Doc_weight){
-//			for (double tf : doc){
-//				System.out.print(tf + ", ");
-//			}
-//			System.out.println("");
-//		}
+		System.out.println("Print tf-------------------------");
+		for (double[] doc : Doc_tf){
+			for (double tf : doc){
+				System.out.print(tf + ", ");
+			}
+			System.out.println("");
+		}
+		
+		System.out.println("Print df-------------------------");
+		for (double[] doc : Doc_df){
+			for (double df : doc){
+				System.out.print(df + ", ");
+			}
+			System.out.println("");
+		}
+		
+		for (int i = 0; i < Doc_tf.size(); i++){
+			for (int j = 0; j < Doc_tf.get(i).length; j++){
+				
+				// Method 1: Normal tf-idf
+				Doc_weight.get(i)[j] = Doc_tf.get(i)[j] * Math.log10((double) Doc_tokens.size()/Doc_df.get(i)[j]);	
+				
+				// Method 2: wtf-idf, use Method 1 in computing the df
+				// Some bugs in it
+				//Doc_weight.get(i)[j] = (1 + Math.log10(Doc_tf.get(i)[j])) * Math.log10((double) Doc_tokens.size()/Doc_df.get(i)[j]);
+				
+				// Method 3: tf/df
+				// Not very well
+				//Doc_weight.get(i)[j] = Doc_tf.get(i)[j]/Doc_df.get(i)[j];
+			}
+		}
+		
 		
 		query_vector = NormalizeVector(query_vector);
 		query.weight = query_vector;
-		
-		//Print query vector
-//		System.out.println("Print query vector: ");
-//		for (int i = 0; i < query_vector.length; i++){
-//			System.out.print(query_vector[i] + ", ");
-//		}
-//		System.out.println("\n");
 		
 		//Calculate normal for each doc
 		for (int i = 0; i < Doc_weight.size(); i++){
@@ -169,12 +179,12 @@ public class CreateVector {
 //		System.out.println("\n");
 		
 		// Doc weight after normalization
-//		for (double[] doc : Doc_weight){
-//			for (double tf : doc){
-//				System.out.print(tf + ", ");
-//			}
-//			System.out.println("");
-//		}
+		for (double[] doc : Doc_weight){
+			for (double tf : doc){
+				System.out.print(tf + ", ");
+			}
+			System.out.println("");
+		}
 		
 		return (ArrayList<String>) Vocab_list;
 		

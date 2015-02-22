@@ -21,7 +21,7 @@ public class FeedBack {
 		scan = new Scanner(System.in);
 		keywords = scan.nextLine();
 		
-		System.out.println(keywords);
+		//System.out.println(keywords);
 		
 		double target = 0.9;
 		double precision = 0;
@@ -40,14 +40,14 @@ public class FeedBack {
 			//get vector input
 			List<String[]> input =  bd.getInput(docs);
 			
-			ArrayList<String> vocab_list = null;
-			CreateVector cv = new CreateVector();
-			vocab_list = cv.CalcWeight(docs, q, input);
-			
-			//Get user feedback
+			//Get user feedback before calculating the weight vector
 			for(int i=0;i<docs.size();i++){
 				docs.get(i).relevant=getFeedBack(docs.get(i));
 			}
+			
+			ArrayList<String> vocab_list = null;
+			CreateVector cv = new CreateVector();
+			vocab_list = cv.CalcWeight(docs, q, input);
 			
 			
 			//query expand calculate and get query words
