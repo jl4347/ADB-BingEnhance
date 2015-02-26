@@ -24,9 +24,12 @@ public class BingData {
 	
 	//Provide your account key here. 
 	String accountKey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
-
+	
 	public String getFromBing(String query) {
+		//get rid of the " "
 		query.replaceAll(" ", "%20");
+		
+		//example provided code
 		String bingUrl = "https://api.datamarket.azure.com/Bing/Search/Web?Query=%27"+query+"%27&$top=10&$format=Json";
 		byte[] accountKeyBytes = Base64.encodeBase64((accountKey + ":" + accountKey).getBytes());
 		String accountKeyEnc = new String(accountKeyBytes);
@@ -52,13 +55,17 @@ public class BingData {
 		
 		return content;
 	}
+	
+	//parseJson and store in List<Doc>
 	public List<Doc> parseJson(String content){
 		List <Doc> docs = new ArrayList<Doc>();
 	    try {
+	    	//parse data
 			JSONObject jsonObj = new JSONObject(content);
 			JSONObject d = jsonObj.getJSONObject("d");
 			JSONArray result = d.getJSONArray("results");
 			
+			//create Doc objects
 			for (int i=0;i<result.length();i++){
 				JSONObject doc = (JSONObject)result.get(i);
 				String url = doc.getString("DisplayUrl");
@@ -73,6 +80,8 @@ public class BingData {
 		}		
 		return docs;
 	}
+	
+	//
 	public List<String[]> getInput(List<Doc> docs){
 		List<String[]> result = new ArrayList<String[]>();
 		for (int i=0; i<docs.size();i++){			

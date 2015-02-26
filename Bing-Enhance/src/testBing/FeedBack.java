@@ -40,6 +40,11 @@ public class FeedBack {
 			//get vector input
 			List<String[]> input =  bd.getInput(docs);
 			
+			//Docs less than 10, stop the iteration
+			if(docs.size()<10)
+				break;
+			
+			
 			//Get user feedback before calculating the weight vector
 			for(int i=0;i<docs.size();i++){
 				docs.get(i).relevant=getFeedBack(docs.get(i));

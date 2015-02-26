@@ -26,8 +26,4 @@ public class Doc {
 		}
     }
 	
-//	public static void Doc_Title(){
-//		
-//	}
-//	
 }

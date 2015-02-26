@@ -10,13 +10,28 @@ import util.Doc;
 
 public class QueryExpand {
 
+	//Compute for the next round weight
 	public double[] computeNewWeight(double[] query, List<Doc> docs){
+		
+		/*
+		 * We use Rocchio algorithm to compute weight: 
+		 * q(t+1) = alpha*q(t) + beta sum[d(j)]/Dr + gamma sum[d(j)]/Dnr
+		 * 
+		 * Here, we set alpha to be 1, beta to be 0.75 and gmmma to be 0.15 
+		 * 
+		 */
+		
 		double[] q = new double[query.length];
-		int Dr = countRelevant(docs);
-		int Dnr = 10-Dr;		
+		//Dr is the number of docs that are relevant, Dnr is the # of docs not relevant 
+		int Dr = countRelevant(docs);		
+		int Dnr = 10-Dr;
+				
+		//the beta array stores sum of doc weight in which docs are relevant
 		double[] beta=new double[query.length];
+		//the gamma array stores sum of doc weight in which docs are not relevant
 		double[] gamma=new double[query.length];
 	    
+		//compute the sum of weight
 		for (int i=0;i<docs.size();i++){			
 			if (docs.get(i).relevant){
 				for(int j=0;j<docs.get(i).docWeight.length;j++)
@@ -27,12 +42,14 @@ public class QueryExpand {
 			}
 		}
 		
+		//compute q(t+1)
 		for (int i=0;i<q.length;i++){
 			q[i]=query[i]+0.75*beta[i]/Dr-0.15*gamma[i]/Dnr;
 		}		
 		return q;		
 	}
 	
+	//count the feedback relevant of docs
 	private static int countRelevant(List<Doc> docs){
 		int count =0;
 		for (int i=0;i<docs.size();i++)
@@ -41,6 +58,8 @@ public class QueryExpand {
 		return count;		
 	}	
 	
+	
+	//find two keywords in query weight
 	public int[] findKeywordsIndex(double[] query, HashMap hm){
 		int[] indexes= new int[2];
 		int max_index = 0;
@@ -70,20 +89,14 @@ public class QueryExpand {
 		return indexes;
 	}
 	
+	//compute the Precision, that is # of relevant docs/ # of total docs
 	public double computePrecision(List<Doc> docs){
 		int count =countRelevant(docs);
 		double precision = (double)count/docs.size();			
 		return precision;
 	}
 	
-//	public static void main(String[] args){
-//		double[] d ={0.3, 3.0, 3.2, 3.0};
-//		QueryExpand q = new QueryExpand();
-//		int[] a =q.findKeywordsIndex(d);
-//		for(int i=0;i<2;i++){
-//			System.out.println(a[i]);
-//		}
-//	}
+
 	
 	
 }
