@@ -198,7 +198,7 @@ public class CreateVector {
 		}
 		
 		normal = Math.sqrt(normal);
-		System.out.println(normal);
+		//System.out.println(normal);
 		
 		for (int i = 0; i < Doc_weight.length; i++){
 			Doc_weight[i] = Doc_weight[i]/normal;

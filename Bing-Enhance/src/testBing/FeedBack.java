@@ -14,7 +14,7 @@ public class FeedBack {
 
 	public static void main(String[] args){
 		String pre_query = "";
-		Scanner scan=null;
+		
 		
 		String keywords = "";
 		
@@ -73,7 +73,7 @@ public class FeedBack {
 			//query expand calculate and get query words
 			QueryExpand qe = new QueryExpand();
 			
-			HashMap<Integer, Integer> tindex = new HashMap();
+			HashMap<Integer, Integer> tindex = new HashMap<Integer, Integer>();
 			for (int i=0; i<q.tokens.length;i++){
 				tindex.put(vocab_list.indexOf(q.tokens[i]), 1);
 			}
@@ -112,11 +112,12 @@ public class FeedBack {
 		System.out.println(d.desc);
 		System.out.println();
 		String str=null;
-		Scanner scan=null;
+		//Scanner scan=null;
 		do{
 			System.out.println("Relevant (Y/N)?");
-			scan = new Scanner(System.in);
-			str = scan.nextLine();
+			Scanner scanner = new Scanner(System.in);
+			//scan = scanner;
+			str = scanner.nextLine();
 			System.out.println("\n");
 		}while(!str.equalsIgnoreCase("Y")&&!str.equalsIgnoreCase("N"));
 		if(str.equalsIgnoreCase("Y")){
