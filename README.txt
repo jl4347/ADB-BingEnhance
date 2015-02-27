@@ -13,6 +13,24 @@ cd ADB/
 
 
 =================================================================================
+How compile source code (If the above does not work)
+=================================================================================
+Change directory to Bing-Enhance, and run the following code:
+javac -encoding UTF-8 -Xlint:unchecked -cp ./bin/json.org.jar:./bin/commons-codec-1.10.jar -d ./bin ./src/*/*.java
+
+It will compile .java to .class
+
+
+Change directory to bin, and run the following code:
+jar cfm BingEnhance.jar ./manifest.txt ./*/*.class
+
+It will make jar
+
+Finally, to run our program, you could either run the run.sh discussed above or you can run the following code in bin directory:
+java -jar BingEnhance.jar <bing account key> <precision> <query>>
+
+
+=================================================================================
 List of files we submit
 =================================================================================
 Extra jar we used in our program:
