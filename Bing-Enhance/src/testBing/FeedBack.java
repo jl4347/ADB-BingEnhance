@@ -91,6 +91,7 @@ public class FeedBack {
 			
 						
 			System.out.println("------------------------------------");
+			System.out.println("Summary:");
 			System.out.println("Iteration " + iteration);
 			System.out.println("previous keywords= " + pre_query);
 			System.out.println("augmented keywords= " + key2 + " " + key3);
@@ -116,6 +117,7 @@ public class FeedBack {
 			System.out.println("Relevant (Y/N)?");
 			scan = new Scanner(System.in);
 			str = scan.nextLine();
+			System.out.println("\n");
 		}while(!str.equalsIgnoreCase("Y")&&!str.equalsIgnoreCase("N"));
 		if(str.equalsIgnoreCase("Y")){
 			return true;

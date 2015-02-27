@@ -23,7 +23,6 @@ public class BingData {
 	
 	
 	//Provide your account key here. 
-	//String accountKey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
 	
 	public String getFromBing(String query, String accountKey) {
 		//get rid of the " "

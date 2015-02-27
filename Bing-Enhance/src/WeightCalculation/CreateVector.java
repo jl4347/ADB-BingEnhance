@@ -56,11 +56,11 @@ public class CreateVector {
 		}
 		
 		//1
-		System.out.println(Vocab);
-		//2
-		System.out.println(Vocab_df);
-		//3
-		System.out.println(query_dic);
+//		System.out.println(Vocab);
+//		//2
+//		System.out.println(Vocab_df);
+//		//3
+//		System.out.println(query_dic);
 		
 		List<String> Vocab_list = new ArrayList<String>();
 		
@@ -72,7 +72,7 @@ public class CreateVector {
 		Collections.sort(Vocab_list);
 		
 		//3
-		System.out.println(Vocab_list);
+//		System.out.println(Vocab_list);
 		
 		int Vocab_len = Vocab_list.size();
 		
@@ -133,21 +133,21 @@ public class CreateVector {
 			}
 		}
 		
-		System.out.println("Print tf-------------------------");
-		for (double[] doc : Doc_tf){
-			for (double tf : doc){
-				System.out.print(tf + ", ");
-			}
-			System.out.println("");
-		}
-		
-		System.out.println("Print df-------------------------");
-		for (double[] doc : Doc_df){
-			for (double df : doc){
-				System.out.print(df + ", ");
-			}
-			System.out.println("");
-		}
+//		System.out.println("Print tf-------------------------");
+//		for (double[] doc : Doc_tf){
+//			for (double tf : doc){
+//				System.out.print(tf + ", ");
+//			}
+//			System.out.println("");
+//		}
+//		
+//		System.out.println("Print df-------------------------");
+//		for (double[] doc : Doc_df){
+//			for (double df : doc){
+//				System.out.print(df + ", ");
+//			}
+//			System.out.println("");
+//		}
 		
 		for (int i = 0; i < Doc_tf.size(); i++){
 			for (int j = 0; j < Doc_tf.get(i).length; j++){
@@ -179,12 +179,12 @@ public class CreateVector {
 //		System.out.println("\n");
 		
 		// Doc weight after normalization
-		for (double[] doc : Doc_weight){
-			for (double tf : doc){
-				System.out.print(tf + ", ");
-			}
-			System.out.println("");
-		}
+//		for (double[] doc : Doc_weight){
+//			for (double tf : doc){
+//				System.out.print(tf + ", ");
+//			}
+//			System.out.println("");
+//		}
 		
 		return (ArrayList<String>) Vocab_list;
 		
