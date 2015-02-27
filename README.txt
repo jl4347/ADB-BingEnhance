@@ -5,7 +5,11 @@ Bing Search Account Key: W5lSDB4TuFJk9OTI55RhqDa74QLT+NphlYDDUlJrJSY
 =================================================================================
 How to run our program
 =================================================================================
+change directory to ADB
+execute run.sh
 
+cd ADB/
+./run.sh <bing account key> <precision> <query>
 
 
 =================================================================================
@@ -27,7 +31,7 @@ Source code:
 =================================================================================
 Internal design of our project
 =================================================================================
-On the top leve, this java program contains three packages: testBing, util and WeightCalculation. "testBing" package
+On the top level, this java program contains three packages: testBing, util and WeightCalculation. "testBing" package
 contains the main method to execute the program, and "QueryExpand" class for query expansion; "util" package has "BingData"
 to interact with Bing API, "Doc" and "Query" class to store the query and documents information; "WeightCalculation" package
 contains "CreateVector" to compute query and document vector.
