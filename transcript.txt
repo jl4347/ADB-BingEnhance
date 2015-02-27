@@ -1,0 +1,624 @@
+=====================================================================
+Iteration 1
+Query: musk
+
+en.wikipedia.org/wiki/Musk
+Musk - Wikipedia, the free encyclopedia
+Musk is a class of aromatic substances commonly used as base notes in perfumery. They include glandular secretions from animals such as the musk deer, numerous plants ...
+
+Relevant (Y/N)?
+n
+
+en.wikipedia.org/wiki/Elon_Musk
+Elon Musk - Wikipedia, the free encyclopedia
+Elon Reeve Musk (born June 28, 1971) is a South Africa-born, Canadian-American entrepreneur, engineer, inventor and investor. He is the CEO and CTO of ...
+
+Relevant (Y/N)?
+y
+
+dictionary.reference.com/browse/musk
+Musk | Define Musk at Dictionary.com
+The freezer case was full of curious meats: a snowy hunk of a fin whale's throat, a slab of musk ox. The resulting molecule is similar in shape and smell to the musk ...
+
+Relevant (Y/N)?
+n
+
+www.fragrantica.com/notes/Musk-4.html
+Musk perfume ingredient, Musk fragrance and essential oils ...
+Musk is a whole class of fragrant substances used as base notes in perfumery. This wonderful animalistic note creates a groundwork on which the rest of the aromatic ...
+
+Relevant (Y/N)?
+n
+
+www.merriam-webster.com/dictionary/musk
+Musk - Definition and More from the Free Merriam-Webster ...
+Full Definition of MUSK 1 a : a substance with a penetrating persistent odor obtained from a sac beneath the abdominal skin of the male musk deer and used as a ...
+
+Relevant (Y/N)?
+n
+
+www.ebay.com/sch/i.html?_nkw=musk+oil
+musk oil | eBay
+Find great deals on eBay for musk oil coty wild musk oil. Shop with confidence.
+
+Relevant (Y/N)?
+n
+
+www.thefreedictionary.com/musk
+musk - definition of musk by The Free Dictionary
+musk (mŭsk) n. 1. a. A greasy secretion with a powerful odor, produced in a glandular sac in the abdomen of a male musk deer and used in traditional medicines and ...
+
+Relevant (Y/N)?
+n
+
+www.amazon.com/s?ie=UTF8&page=1&rh=n%3A3760911%2Ck%3Aperfume%20musk
+Amazon.com: perfume musk: Beauty
+ASDM Beverly Hills Egyptian Musk, A Rich, Egyptian Musk With Precious Wood Blends and Floral Top Note., 0.5 Ounce. $25.00 $24.95 ;
+
+Relevant (Y/N)?
+n
+
+www.cooperlabs.com/Musk
+The Original Musk Oil - 1-800-645-5048 - Cooperlabs Skin ...
+The Original Musk Oil. Its ability to excite has been spoken of for centuries. You may not even be aware of its fragrance, but your own body chemistry is releasing ...
+
+Relevant (Y/N)?
+n
+
+www.genecards.org/cgi-bin/carddisp.pl?gene=MUSK
+MUSK Gene - GeneCards | MUSK Protein | MUSK Antibody
+Complete information for MUSK gene (protein-coding), muscle, skeletal, receptor tyrosine kinase, including: function, proteins, disorders, pathways, orthologs, and ...
+
+Relevant (Y/N)?
+n
+
+------------------------------------
+Summay:
+Iteration 1
+previous keywords= musk
+augmented keywords= elon 1971
+new keywords= musk elon 1971
+precision=0.1
+------------------------------------
+
+=====================================================================
+Iteration 2
+Query: musk elon 1971
+
+en.wikipedia.org/wiki/Elon_Musk
+Elon Musk - Wikipedia, the free encyclopedia
+Elon Reeve Musk (born June 28, 1971) is a South Africa-born, Canadian-American entrepreneur, engineer, inventor and investor. He is the CEO and CTO of ...
+
+Relevant (Y/N)?
+y
+
+www.biography.com/people/elon-musk-20837159?page=1
+Elon Musk - Biography - Inventor, Engineer, Explorer ...
+Elon Musk is an entrepreneur known for co-founding Tesla Motors, X.com—which later became PayPal—and SpaceX, the last of which launched a landmark commercial ...
+
+Relevant (Y/N)?
+y
+https://www.crunchbase.com/person/elon-musk
+Elon Musk - Chairman, CEO and Product Architect @ Tesla ...
+Elon Musk (born June 28,1971) is an entrepreneur and a co-founder of PayPal, Tesla Motors and Space Exploration Technologies. He is chairman/CEO of Tesla Motors and ...
+
+Relevant (Y/N)?
+y
+
+www.notablebiographies.com/news/Li-Ou/Musk-Elon.html
+Elon Musk Biography - life, parents, name, story, history ...
+Elon Musk was a multi-millionaire by the time he reached the age of thirty-one thanks to his creation of the company that became PayPal, the popular money ...
+
+Relevant (Y/N)?
+y
+
+mashable.com/category/elon-musk
+Elon Musk - Mashable
+Elon Musk (born 28 June 1971) is an entrepreneur and a co-founder of PayPal and SpaceX. He is chairman of Tesla Motors and SolarCity.
+
+Relevant (Y/N)?
+y
+
+www.britannica.com/EBchecked/topic/1676437
+Elon Musk | biography - American entrepreneur ...
+Elon Musk, (born June 28, 1971, Pretoria, South Africa), South African-born American entrepreneur who cofounded the electronic-payment firm PayPal and the maker of ...
+
+Relevant (Y/N)?
+y
+
+www.jewishvirtuallibrary.org/jsource/biography/elonmusk.html
+Elon Musk | Jewish Virtual Library
+Elon Musk (1971 - ) Tweet. Elon Musk is the founder and CEO of SpaceX, a company that builds space shuttles for private use and for NASA.
+
+Relevant (Y/N)?
+y
+
+www.astrotheme.com/astrology/Elon_Musk
+Astrology: Elon Musk, date of birth: 1971/06/28, Horoscope ...
+Astrology: Elon Musk, born June 28, 1971 in Pretoria, Horoscope, astrological portrait, dominant planets, birth data, heights, and interactive chart. 48,486 Free ...
+
+Relevant (Y/N)?
+y
+
+www.brainyquote.com/quotes/authors/e/elon_musk.html
+Elon Musk Quotes - BrainyQuote
+Enjoy the best Elon Musk Quotes at BrainyQuote. Quotations by Elon Musk, American Businessman, Born June 28, 1971. Share with your friends.
+
+Relevant (Y/N)?
+y
+
+www.facebook.com/pages/Elon-Musk/19958149870
+Elon Musk | Facebook
+Elon Musk (born 28 June 1971) is an entrepreneur and a co-founder of PayPal and SpaceX. He is chairman of Tesla Motors and SolarCity.
+
+Relevant (Y/N)?
+y
+
+
+
+
+Second query:
+=====================================================================
+Iteration 1
+Query: gates
+
+www.gates.com
+Gates Corporation
+Gates Corporation is Powering Progress™ in the Oil & Gas, Energy, Mining, Marine, Agriculture, Transportation and Automotive Industries.
+
+Relevant (Y/N)?
+n
+
+
+www.amazon.com/s?ie=UTF8&page=1&rh=i%3Aaps%2Ck%3Agates
+Amazon.com: gates
+Product Description... Easy Open Extra Wide Safety Gate boasts 100 percent steel ...
+
+Relevant (Y/N)?
+n
+
+
+www.gatecrafters.com/design_your_gates.aspx
+Driveway Gates | Automatic Gates | Electric Gates
+Driveway Gates - Automatic Gates The high-quality driveway gates from GateCrafters.com come in a wide variety of options to ...
+
+Relevant (Y/N)?
+n
+
+
+www.gates.com/industries/automotive
+Gates Automotive Aftermarket Solutions | Gates Corporation
+Gates offers a complete line of original equipment (OE) automotive aftermarket products and solutions, including automotive hose, belts, & accessories.
+
+Relevant (Y/N)?
+n
+
+
+https://www.facebook.com/gatesnj
+gates | Facebook
+Gates joined us after their session for an interview to discuss Nebraska, the "real Dan" and the finer points of recording a bass drum in a large empty room ...
+
+Relevant (Y/N)?
+n
+
+
+www.gatesbbq.com
+Gates Bar B.Q.
+With the tantalizing hickory barbecue smell drawing the customer through the ranch-style doors, he is immediately greeted.
+
+Relevant (Y/N)?
+n
+
+
+gateshousings.com
+Gates Underwater Products | 'Bulletproof' Housings
+Zsolt Sásdi demonstrates how to produce incredible underwater motion images with the Gates AX100 rig. His Demo Reel can be viewed in 4K. www.saser.hu...
+
+Relevant (Y/N)?
+n
+
+
+navigates.gates.com
+NaviGates - Gates Corporation
+Gates high quality belt & hose solutions support your energy, exploration, extraction, infrastructure, agriculture & transportation needs.
+
+Relevant (Y/N)?
+n
+
+
+www.toysrus.com/family/index.jsp?categoryId=2256222
+Baby Gates - Babies"R"Us
+Safe & durable baby gates will keep your baby safe. Choose from a large assortment of baby gates including extra wide gates to suit your needs. Shop today.
+
+Relevant (Y/N)?
+n
+
+
+en.wikipedia.org/wiki/Bill_Gates
+Bill Gates - Wikipedia, the free encyclopedia
+William Henry "Bill" Gates III (born October 28, 1955) is an American business magnate, philanthropist, investor, computer programmer, and inventor. Gates originally ...
+
+Relevant (Y/N)?
+y
+
+------------------------------------
+Summary:
+Iteration 1
+previous keywords= gates
+augmented keywords= bill 1955
+new keywords= gates bill 1955
+precision=0.1
+------------------------------------
+
+=====================================================================
+Iteration 2
+Query: gates bill 1955
+
+en.wikipedia.org/wiki/Bill_Gates
+Bill Gates - Wikipedia, the free encyclopedia
+William Henry "Bill" Gates III (born October 28, 1955) is an American business magnate, philanthropist, investor, computer programmer, and inventor. Gates originally ...
+
+Relevant (Y/N)?
+y
+
+
+www.astro.com/astro-databank/Gates,_Bill
+Astrology: Bill Gates, birth date 28 October 1955, born in ...
+Astrology data, biography and horoscope chart of: Bill Gates born on 28 October 1955 Seattle, Washington
+
+Relevant (Y/N)?
+y
+
+
+www.biography.com/people/bill-gates-9307520
+Bill Gates - Biography - - Biography.com
+Synopsis. Born on October 28, 1955, in Seattle, Washington, famed entrepreneur Bill Gates began to show an interest in computer programming at age 13.
+
+Relevant (Y/N)?
+y
+
+
+id.loc.gov/authorities/names/n91008414
+Gates, Bill, 1955- - LC Linked Data Service (Library of ...
+found: Wikipedia, Mar. 4, 2013 (Bill Gates; William Henry "Bill" Gates III; born October 28, 1955 in Seattle, Wash.; American programmer, inventor, business magnate ...
+
+Relevant (Y/N)?
+y
+
+
+www.worldcat.org/identities/lccn-n91-8414
+Gates, Bill 1955- [WorldCat Identities]
+Bill Gates : a twentieth-century life by Marc Aronson ( Book ) Business the Bill Gates way 10 secrets of the world's richest business leader ...
+
+Relevant (Y/N)?
+y
+
+
+www.referenceforbusiness.com/biography/F-L/Gates-Bill-1955.html
+Bill Gates 1955— Biography - A precocious pioneer, Right ...
+A PRECOCIOUS PIONEER Gates grew up in a prosperous area of Seattle, Washington, with his parents and two sisters. The son of a lawyer and a schoolteacher, Gates ...
+
+Relevant (Y/N)?
+y
+
+
+www.infoplease.com/encyclopedia/people/gates-bill.html
+Bill Gates - Infoplease: Encyclopedia, Almanac, Atlas ...
+Gates, Bill , 1955–, American business executive, b. Seattle, Wash. At the age of 19, Gates founded the Microsoft Corp., a computer software
+
+Relevant (Y/N)?
+y
+
+
+startup.nmnaturalhistory.org/gallery/item.php?ii=24
+Bill Gates (b. 1955) at the START-UP Gallery
+Bill Gates (b. 1955) is discussed in the It Happened in Albuquerque section of the STARTUP Gallery. Click on the map to explore any section of the gallery.
+
+Relevant (Y/N)?
+y
+
+
+avhs-apush.wikispaces.com/Gates,+Bill%3B+1955-
+AVHS-APUSH - Gates, Bill; 1955-
+Bill Gates Personal Life Gates was born on October 28, 1955 in Seattle. His father was a Seattle attorney and his mother was a schoolteacher, University of Washington ...
+
+Relevant (Y/N)?
+y
+
+
+www.notablebiographies.com/Fi-Gi/Gates-Bill.html
+Bill Gates Biography - life, family, childhood, children ...
+Love of computer technology William H. Gates III was born on October 28, 1955, in Seattle, Washington. He was the second child and only son of William ...
+
+Relevant (Y/N)?
+y
+
+------------------------------------
+Summary:
+Iteration 2
+previous keywords= gates bill 1955
+augmented keywords=  
+new keywords= gates bill 1955  
+precision=1.0
+------------------------------------
+
+
+Third query:
+=====================================================================
+Iteration 1
+Query: columbia
+
+www.columbia.com
+Shop Direct for Jackets, Pants, Shirts & Shoes | Columbia ...
+Shop direct from Columbia Sportswear. Buy Columbia jackets, pants, shirts, fleece, shoes, boots & sweaters. Visit our blog, watch videos & meet our athletes.
+
+Relevant (Y/N)?
+n
+
+
+en.wikipedia.org/wiki/Columbia
+Columbia - Wikipedia, the free encyclopedia
+Columbia may refer to: Contents 1 Places 1.1 In North America 1.2 Elsewhere 1.3 In fiction 2 Companies 2.1 Music and entertainment 2.2 Other 3 Music 4 People 5 ...
+
+Relevant (Y/N)?
+n
+
+
+www.columbia.edu
+Columbia University in the City of New York
+Founded in 1754 as King's College by royal charter, it is the oldest institution of higher learning in the State of New York. Located in New York City and a member of ...
+
+Relevant (Y/N)?
+y
+
+
+en.wikipedia.org/wiki/Colombia
+Colombia - Wikipedia, the free encyclopedia
+Colombia, officially the Republic of Colombia, is a country situated in the northwest of South America, bordered to the northwest by Panama ; to the east by Venezuela ...
+
+Relevant (Y/N)?
+n
+
+
+columbiasc.net
+:: Welcome to the City of Columbia ::
+The Columbia City Hall, also known as Old United States Court House and Post Office, was built in 1870.It was listed on the National Register of Historic Places in 1973.
+
+Relevant (Y/N)?
+n
+
+
+www.gocolumbiamo.com
+City of Columbia, Missouri's Official Government Web Site
+The City of Columbia Missouri's official web site. Perform business transactions, view services, department information, upcoming meetings and events.
+
+Relevant (Y/N)?
+n
+
+
+www.college.columbia.edu
+Columbia College | Columbia College
+Columbia College is pleased to share the Columbia College Annual Report 2013–2014, which celebrates our students’ and faculty members’ achievements, thanks our ...
+
+Relevant (Y/N)?
+y
+
+
+www.gocolumbialions.com
+GoColumbiaLions.com—Official Web Site of Columbia ...
+The Official Online Home of the Columbia Lions, Columbia Athletics, Columbia University, Columbia Lions Official Merchandise, Columbia Lions broadcasting
+
+Relevant (Y/N)?
+n
+
+
+www.parks.ca.gov/?page_id=552
+Columbia SHP - California State Parks
+Location - Directions. Columbia State Historic Park is three miles north of Sonora, off Highway 49. The parks address is 11255 Jackson Street Columbia CA, 95310.
+
+Relevant (Y/N)?
+n
+
+
+www.colum.edu
+Columbia College Chicago
+When you attend Columbia College Chicago, your home is one of the most active, vibrant, forward-thinking cities in the world.
+
+Relevant (Y/N)?
+n
+
+
+------------------------------------
+Summary:
+Iteration 1
+previous keywords= columbia
+augmented keywords= college new
+new keywords= columbia college new
+precision=0.2
+------------------------------------
+
+=====================================================================
+Iteration 2
+Query: columbia college new
+
+www.columbia.edu
+Columbia University in the City of New York
+Founded in 1754 as King's College by royal charter, it is the oldest institution of higher learning in the State of New York. Located in New York City and a member of ...
+
+Relevant (Y/N)?
+y
+
+
+www.college.columbia.edu
+Columbia College | Columbia College
+Columbia College. Columbia University in the City of New York 208 Hamilton Hall, Mail Code 2805 1130 Amsterdam Avenue New York, NY 10027.
+
+Relevant (Y/N)?
+y
+
+
+www.ccis.edu
+Columbia College: On Campus & Online - Associate, Bachelor ...
+Columbia College Columbia College, providing adult education, distance learning, online degrees and education at more than 30 campuses across the country.
+
+Relevant (Y/N)?
+n
+
+
+www.colum.edu
+Columbia College Chicago
+When you attend Columbia College Chicago, your home is one of the most active, vibrant, forward-thinking cities in the world.
+
+Relevant (Y/N)?
+n
+
+
+www.columbiasc.edu
+Columbia College South Carolina
+A private liberal arts college for women founded in 1854, with a co-educational graduate school and evening college.
+
+Relevant (Y/N)?
+n
+
+
+www.algemeiner.com/2015/02/23/columbia-leads...top-10-colleges-with...
+Columbia Leads List of America's Top 10 Colleges 'With ...
+New York’s Columbia University is home to the worst antisemitic activity in the United States, according to a list compiled by the David Horowitz Freedom ...
+
+Relevant (Y/N)?
+y
+
+
+www.columbia.edu/content/admissions.html
+Admissions | Columbia University in the City of New York
+For information on admission to a Columbia school, select the appropriate school from the drop-down menu on the right.
+
+Relevant (Y/N)?
+y
+
+
+colleges.usnews.rankingsandreviews.com/.../columbia-university-2707
+Columbia University | Best College | US News
+Is Columbia University the best college for you? Find out at US News. See if Columbia University is ranked and get info on admission, tuition, student life, and more.
+
+Relevant (Y/N)?
+y
+
+
+columbiaspectator.com
+Columbia Daily Spectator
+News, sports, and entertainment coverage for the Morningside Heights community in New York City. Official daily newspaper of Columbia University.
+
+Relevant (Y/N)?
+n
+
+
+www.gocolumbia.edu
+Columbia College
+Columbia College Free Financial Aid Workshop Community Cash For College ... More Columbia News > Thank You For Visiting Our Site! We would love to hear from you.
+
+Relevant (Y/N)?
+n
+
+------------------------------------
+Summary:
+Iteration 2
+previous keywords= columbia college new
+augmented keywords= york best
+new keywords= columbia college new york best
+precision=0.5
+------------------------------------
+
+=====================================================================
+Iteration 1
+Query: columbia college new york best
+
+www.columbia.edu
+Columbia University in the City of New York
+Columbia University in the City of New York. ... THE ARTS AT COLUMBIA. ... New York, NY 10027 © 2015 Columbia University. Contact; Computing;
+
+Relevant (Y/N)?
+y
+
+
+colleges.usnews.rankingsandreviews.com/.../columbia-university-2707
+Columbia University | Best College | US News
+... Columbia University the best ... Columbia University in the City of New York encompasses more than a dozen graduate and professional schools and the over 6,000 ...
+
+Relevant (Y/N)?
+y
+
+
+www.columbia.edu/content/employment-columbia.html
+Employment at Columbia | Columbia University in the City ...
+... about openings at Columbia University, ... university in New York City, Columbia's success is the ... Columbia University is one of the top private ...
+
+Relevant (Y/N)?
+y
+
+
+www.urbanspoon.com/ps/3/7030/new-york-columbia-university-nearby...
+Restaurants near Columbia University, New York
+Columbia University New York, NY 10027 Driving directions Sort: Distance; Name; Popularity; Prices
+
+Relevant (Y/N)?
+y
+
+
+www.college.columbia.edu
+Columbia College | Columbia College
+Columbia College is pleased to share the Columbia College Annual Report 2013–2014, ... New York, NY 10027. ColumbiaCollege@columbia.edu Phone: 212-854-2441.
+
+Relevant (Y/N)?
+y
+
+
+www.ccis.edu
+Columbia College: On Campus & Online - Associate, Bachelor ...
+Columbia College Columbia College, ... CC is #4 on Best for Vets list. Columbia College was named to Military Times’ “Best for Vets: Colleges 2015” list.
+
+Relevant (Y/N)?
+n
+
+
+topics.nytimes.com/top/reference/timestopics/organizations/c...
+Columbia University - The New York Times
+News about Columbia University, including commentary and archival articles published in The New York Times.
+
+Relevant (Y/N)?
+y
+
+
+www.tripadvisor.com/...Columbia_University-New_York_City_New_York.html
+Columbia University - New York City - Reviews of Columbia ...
+Columbia University, New York City: See 127 reviews, articles, ... Things to do near Columbia University; Best of 2015 More. Travel Guides Travel Forum
+
+Relevant (Y/N)?
+y
+
+
+www.topuniversities.com/student-info/choosing-university/columbia...
+Top Universities in New York City: Columbia or NYU? | Top ...
+Want to study at one of the top universities in New York City? Find out how Columbia University and New York University compare.
+
+Relevant (Y/N)?
+y
+
+
+www.yelp.com/biz/columbia-university-new-york-9
+Columbia University - Morningside Heights - New York, NY ...
+95 Reviews of Columbia University "Come here for the academics, stay for JJ's place. ... One of the best decisions I've ever made was attending this great institution!
+
+Relevant (Y/N)?
+y
+
+
+------------------------------------
+Summary:
+Iteration 3
+previous keywords= columbia college new york best
+augmented keywords= city in
+new keywords= columbia college new york best city in
+precision=0.9
+------------------------------------
+
