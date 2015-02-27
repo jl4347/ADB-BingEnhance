@@ -1,2 +1,2 @@
 Main-Class: testBing.FeedBack
-
+Class-Path: commons-codec-1.10.jar json.org.jar
