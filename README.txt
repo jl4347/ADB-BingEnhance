@@ -27,7 +27,7 @@ jar cfm BingEnhance.jar ../Manifest.txt ./*/*.class
 It will make jar
 
 Finally, to run our program, you could either run the run.sh discussed above or you can run the following code in bin directory:
-java -jar BingEnhance.jar <bing account key> <precision> <query>>
+java -jar BingEnhance.jar <bing account key> <precision> <query>
 
 
 =================================================================================
