@@ -22,7 +22,7 @@ It will compile .java to .class
 
 
 Change directory to bin, and run the following code:
-jar cfm BingEnhance.jar ./manifest.txt ./*/*.class
+jar cfm BingEnhance.jar ../Manifest.txt ./*/*.class
 
 It will make jar
 
