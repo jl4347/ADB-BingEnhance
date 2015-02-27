@@ -23,9 +23,9 @@ public class BingData {
 	
 	
 	//Provide your account key here. 
-	String accountKey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+	//String accountKey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
 	
-	public String getFromBing(String query) {
+	public String getFromBing(String query, String accountKey) {
 		//get rid of the " "
 		query.replaceAll(" ", "%20");
 		
@@ -88,7 +88,7 @@ public class BingData {
 			String sentence = docs.get(i).title+" "+docs.get(i).desc;
 			//
 			sentence= sentence.toLowerCase();
-			Pattern p=Pattern.compile("[.,\"\\?!:'-\\)\\(\\&]");
+			Pattern p=Pattern.compile("[.,\"\\?!:'-\\)\\(\\&\\|#$@&\\^\\*%\\{\\}\\[\\]\\<\\>]");
 			Matcher m=p.matcher(sentence);
 			String r=m.replaceAll("");	
 			r = r.trim();
@@ -97,18 +97,6 @@ public class BingData {
 		}
 		return result;
 	}
-//	public static void main(String[] args){
-//		
-//		BingData  d = new BingData();
-//		//call Bing API
-//		String s = d.getFromBing("columbia");
-//		//get doc objects
-//		List<Doc> docs= d.parseJson(s);
-//		//get vector input
-//		List<String[]> r = d.getInput(docs);
-//		for (int i=0;i<r.size();i++){
-//			System.out.println(r.get(i)[0]);
-//		}
-//	}
+
 	
 }

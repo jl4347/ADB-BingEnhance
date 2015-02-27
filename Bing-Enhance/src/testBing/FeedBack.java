@@ -17,13 +17,28 @@ public class FeedBack {
 		Scanner scan=null;
 		
 		String keywords = "";
-		System.out.println("Please enter one keyword for query: ");
-		scan = new Scanner(System.in);
-		keywords = scan.nextLine();
+		
+		
+		//verify user input
+		if (args.length<3){
+			System.out.println("Please enter one keyword for query: <bing account key> <precision> <query>");
+			return;
+		}
+		double target = 0;
+		String bingAPIkey = args[0];
+		keywords = args[2];
+		try{
+			target = Double.parseDouble(args[1]);
+		}catch(NumberFormatException ne){
+			System.out.println("<precision> must be a number between 0 and 1");
+			System.out.println("Please enter one keyword for query: <bing account key> <precision> <query>");
+			return;
+		}
+		
 		
 		//System.out.println(keywords);
 		
-		double target = 0.9;
+		
 		double precision = 0;
 		Query q = new Query();
 		q.tokens=keywords.split(" ");
@@ -34,7 +49,7 @@ public class FeedBack {
 			iteration++;
 			BingData bd = new BingData();
 			//call Bing API
-			String response=bd.getFromBing(query);
+			String response=bd.getFromBing(query, bingAPIkey);
 			//get doc objects
 			List<Doc> docs = bd.parseJson(response);
 			//get vector input
