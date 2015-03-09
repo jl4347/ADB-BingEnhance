@@ -28,7 +28,7 @@ public class FeedBack {
 		String bingAPIkey = args[0];
 		keywords= args[2];
 		for(int i = 3;i<args.length;i++)
-			keywords = keywords+"%27"+args[i];
+			keywords = keywords+"%20"+args[i];
 		try{
 			target = Double.parseDouble(args[1]);
 		}catch(NumberFormatException ne){
@@ -43,7 +43,7 @@ public class FeedBack {
 		
 		double precision = 0;
 		Query q = new Query();
-		q.tokens=keywords.split("%27");
+		q.tokens=keywords.split("%20");
 		String query = keywords;
 		int iteration = 0;
 		do{
