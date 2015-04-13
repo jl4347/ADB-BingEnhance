@@ -1,6 +1,6 @@
 Name: Mingfei Ge(mg3534), Jialun Liu(jl4347)
 
-Bing Search Account Key: W5lSDB4TuFJk9OTI55RhqDa74QLT+NphlYDDUlJrJSY
+Bing Search Account Key: xxxxxxxxxxxxxxxxxxx
 
 =================================================================================
 How to run our program
